@@ -1,0 +1,11 @@
+{
+    "name": "lianran111/adapay-sdk",
+    "description": "汇付天下Api",
+    "authors": [
+        {
+            "name": "Kevin",
+            "email": "17621853067@163.com"
+        }
+    ],
+    "require": {}
+}

@@ -25,8 +25,10 @@ class AdaPayCommon extends AdaPay
 
         $adapayApiVersion = isset($requestParams['adapay_api_version']) ? $requestParams['adapay_api_version'] : 'v1';
 
-        self::getGateWayUrl(self::$gateWayType);
-        return self::$gateWayUrl . "/" . $adapayApiVersion . "/" . str_replace(".", "/", $adapayFuncCode);
+        //self::getGateWayUrl(self::$gateWayType);
+        self::getGateWayUrl($this->gateWayType);
+        //return self::$gateWayUrl . "/" . $adapayApiVersion . "/" . str_replace(".", "/", $adapayFuncCode);
+        return $this->gateWayUrl . "/" . $adapayApiVersion . "/" . str_replace(".", "/", $adapayFuncCode);
     }
 
     /**

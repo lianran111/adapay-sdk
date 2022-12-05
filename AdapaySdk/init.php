@@ -28,6 +28,8 @@ include_once SDK_BASE . "/PaymentReverse.php";
 
 # 个人用户
 include_once SDK_BASE . "/Member.php";
+# 个人用户实名
+include_once SDK_BASE . "/AdaPayCommon.php";
 # 企业用户
 include_once SDK_BASE . "/CorpMember.php";
 # 结算账户

@@ -30,9 +30,10 @@ class SettleAccount extends AdaPay
     {
         ksort($params);
         $request_params = $this->do_empty_data($params);
-        $req_url        = $this->gateWayType . $this->endpoint . "/balance";
-        $header         = $this->get_request_header($req_url, http_build_query($request_params), self::$headerText);
-        $this->result   = $this->ada_request->curl_request($req_url . "?" . http_build_query($request_params), "", $header, false);
+        //$req_url        = $this->gateWayType . $this->endpoint . "/balance";
+        $req_url      = $this->gateWayUrl . $this->endpoint . "/balance";
+        $header       = $this->get_request_header($req_url, http_build_query($request_params), self::$headerText);
+        $this->result = $this->ada_request->curl_request($req_url . "?" . http_build_query($request_params), "", $header, false);
         // $this->result = $this->sdk_tools->get($params, $this->endpoint."/balance");
     }
 

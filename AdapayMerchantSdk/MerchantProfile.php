@@ -25,7 +25,7 @@ class MerchantProfile extends AdaPay
     {
         $request_params = $params;
         $request_params = $this->do_empty_data($request_params);
-        $req_url        = self::$gateWayUrl . $this->endpoint;
+        $req_url        = $this->gateWayUrl . $this->endpoint;
         ksort($request_params);
         $sign_request_params = $request_params;
         unset($sign_request_params['file']);
@@ -39,7 +39,7 @@ class MerchantProfile extends AdaPay
     {
         $request_params = $params;
         $request_params = $this->do_empty_data($request_params);
-        $req_url        = self::$gateWayUrl . $this->audit_endpoint;
+        $req_url        = $this->gateWayUrl . $this->audit_endpoint;
         ksort($request_params);
         $sign_str     = $this->ada_tools->createLinkstring($request_params);
         $header       = $this->get_request_header($req_url, $sign_str, self::$headerEmpty);
@@ -49,7 +49,7 @@ class MerchantProfile extends AdaPay
     public function merProfileAuditStatus($params = [])
     {
         $request_params = $params;
-        $req_url        = self::$gateWayUrl . $this->query_endpoint;
+        $req_url        = $this->gateWayUrl . $this->query_endpoint;
         $header         = $this->get_request_header($req_url, http_build_query($request_params), self::$headerText);
         $this->result   = $this->ada_request->curl_request($req_url . '?' . http_build_query($request_params), '', $header, false);
     }

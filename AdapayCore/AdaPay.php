@@ -39,7 +39,6 @@ class AdaPay
 
     public static function init($config_info, $prod_mode = "live", $is_object = false)
     {
-
         if (empty($config_info)) {
             try {
                 throw new \Exception('缺少SDK配置信息');
@@ -62,7 +61,12 @@ class AdaPay
             $config_obj   = json_decode($cfg_file_str, true);
         }
 
-        $sdk_version                      = defined("SDK_VERSION") ? SDK_VERSION : "v1.0.0";
+        if (isset($config_obj['sdk_version']) && $config_obj['sdk_version']) {
+            $sdk_version = $config_obj['sdk_version'];
+        } else {
+            $sdk_version = defined("SDK_VERSION") ? SDK_VERSION : "v1.0.0";
+        }
+
         self::$header['sdk_version']      = $sdk_version;
         self::$headerText['sdk_version']  = $sdk_version;
         self::$headerEmpty['sdk_version'] = $sdk_version;

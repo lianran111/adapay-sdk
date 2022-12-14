@@ -1,12 +1,7 @@
 <?php
 define("SDK_BASE1", dirname(__FILE__));
-//if (!defined('SDK_BASE')) {
-//}
 
-//if (!defined('ADAPAY_CORE')) {
-//    define("ADAPAY_CORE", dirname(__FILE__) . "/../AdapayCore");
-//}
-
+//define("ADAPAY_CORE", dirname(__FILE__) . "/../AdapayCore");
 //define("SDK_VERSION", "v1.1.2");
 //define("GATE_WAY_URL", "https://%s.adapay.tech");
 //define("DEBUG", true);

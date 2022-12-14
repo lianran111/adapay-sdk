@@ -13,10 +13,10 @@ if (!defined('ADAPAY_CORE')) {
 //define("LOG", dirname(SDK_BASE) . "/log/prod");
 //define("ENV", "prod");
 
-include_once ADAPAY_CORE . "/AdaPay.php";
-include_once ADAPAY_CORE . "/AdaLoader.php";
+include ADAPAY_CORE . "/AdaPay.php";
+include ADAPAY_CORE . "/AdaLoader.php";
 
-include_once SDK_BASE . "/MerchantConf.php";
-include_once SDK_BASE . "/MerchantUser.php";
-include_once SDK_BASE . "/MerchantProfile.php";
-include_once SDK_BASE . "/MerchantApp.php";
+include SDK_BASE . "/MerchantConf.php";
+include SDK_BASE . "/MerchantUser.php";
+include SDK_BASE . "/MerchantProfile.php";
+include SDK_BASE . "/MerchantApp.php";

@@ -58,5 +58,6 @@ include_once SDK_BASE . "/AdapaySdk/FastPayCard.php";
 # MerchantSdk
 include_once SDK_BASE . "/AdapayMerchantSdk/MerchantConf.php";
 include_once SDK_BASE . "/AdapayMerchantSdk/MerchantUser.php";
+include_once SDK_BASE . "/AdapayMerchantSdk/MerchantRealname.php";
 include_once SDK_BASE . "/AdapayMerchantSdk/MerchantProfile.php";
 include_once SDK_BASE . "/AdapayMerchantSdk/MerchantApp.php";
